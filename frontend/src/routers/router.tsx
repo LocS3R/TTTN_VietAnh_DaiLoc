@@ -26,12 +26,7 @@ const router: RouteObject[] = [
     children: [
       {
         path: "",
-        element: (
-          <ProtectedRoute>
-            {/* <SidebarLayout /> */}
-            <Navigate to="/dash" />
-          </ProtectedRoute>
-        ),
+        element: <Navigate to="/home" />,
       },
       {
         path: "/login",

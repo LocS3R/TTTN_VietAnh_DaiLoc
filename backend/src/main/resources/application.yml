@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/nhamaynuoc
+    username: postgres
+    password: admin@1510
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+locdevz:
+  app:
+    jwtCookieName: locdevz
+    jwtRefreshCookieName: locdevz-jwt-refresh
+    jwtSecret: bfa519a4d902c72faf4ba6c63fa3826b088fa4bfc84f5b8fb25ff41f5bd86d26aa40b5a647a02e893b6f08fda6946eff3d705ae5808d9c6c5b4884cb75009f5f2350e823c77f829befabd8d6ada3d5d50511a2bf863324234c0f6d481662474c4fb179dce24c037a279e1425110e39256d37bbf10512a67b0922e00542431d89b47d813976a9a94bd90d7665218bc18243ff6071160cbfb10b006c3e95c6e0527d57a6ae47f26a9af7a1986ceec804005155e87e480591e9d19aedd895c475a0469ba3a0feb462418ba370cb2305bc75139d7ca267203c7f9452143cef303bdefe1e6397abcdb4743aaa859d4bdd4e2914a9e681fdecc99540f6ebdc7cf0d9de
+    jwtExpirationMs: 86400000
+    jwtRefreshExpirationMs: 86400000

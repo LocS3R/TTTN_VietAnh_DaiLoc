@@ -19,9 +19,12 @@ import Footer from "./Components/Footer";
 import Hero from "./Components/Hero";
 import Pricing from "./Components/Pricing";
 import FAQ from "./Components/FAQ";
+import { useAuth } from "../../hooks/useAuth";
+import { Navigate } from "react-router-dom";
 
 const Home: React.FC = () => {
   const [mode, setMode] = React.useState<PaletteMode>("dark");
+  const { user } = useAuth();
   // const [showCustomTheme, setShowCustomTheme] = React.useState(true);
   const LPtheme = createTheme(getLPTheme(mode));
   // const defaultTheme = createTheme({ palette: { mode } });
@@ -32,6 +35,7 @@ const Home: React.FC = () => {
 
   return (
     <>
+      {user?.roles.includes("ROLE_ADMIN") && <Navigate to={"/dash"} />}
       <AuthProvider>
         <ThemeProvider theme={LPtheme}>
           <CssBaseline />
